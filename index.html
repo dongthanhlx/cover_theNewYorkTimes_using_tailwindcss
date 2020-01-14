@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:100,200,300,400,500,800,900&display=swap" rel="stylesheet">
+</head>
+<body class="antialiased">
+    <div id="app" class="mx-auto">
+        <header class="border-b border-black p-1">
+            <div class="max-w-5xl flex mx-auto justify-between">
+                <div class="text-center my-auto">
+                    <div class="float-left mr-3 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu w-4"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                    </div>
+                    <div class="float-right cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search w-4"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    </div>
+                </div>
+
+                <div class="text-center my-auto text-xs">
+                    <button class="font-bold hover:bg-gray-200 rounded px-1">ENGLISH</button>
+                    <button class="hover:bg-gray-200 rounded px-1">Tiếng việt</button>
+                </div>
+
+                <div class="text-center my-auto">
+                    <button class="bg-black text-white rounded px-2 py-1 text-xs" type="button">Log in</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="max-w-5xl mt-2 mx-auto flex flex-col">
+            <div id="intro" class="border-b border-gray-300 flex justify-between relative">
+                <div class="text-center">
+                    <div><p class="text-xs">Wednesday, January 8, 2020</p></div>
+                </div>
+
+                <div class="text-center">
+                    <a href="/" aria-label="The New York Times" class="font-bold text-4xl">THE NEW YORK TIMES</a>
+                </div>
+
+                <div class="text-center">
+                    <p class="text-xs">Today's Paper</p>
+                </div>
+            </div>
+
+            <nav class="border-b border-black text-xs text-center">
+                <button class="mx-1 hover:bg-gray-200 px-1 rounded m-1">World</button>
+                <button class="mx-1 hover:bg-gray-200 px-1 rounded m-1">U.S</button>
+                <button class="mx-1 hover:bg-gray-200 px-1 rounded m-1">Politics</button>
+                <button class="mx-1 hover:bg-gray-200 px-1 rounded m-1">N.Y</button>
+                <button class="mx-1 hover:bg-gray-200 px-1 rounded m-1">Business</button>
+                <button class="mx-1 hover:bg-gray-200 px-1 rounded m-1">Opinion</button>
+                <button class="mx-1 hover:bg-gray-200 px-1 rounded m-1">Tech</button>
+                <button class="mx-1 hover:bg-gray-200 px-1 rounded m-1">Science</button>
+                <button class="mx-1 hover:bg-gray-200 px-1 rounded m-1">Health</button>
+                <button class="mx-1 hover:bg-gray-200 px-1 rounded m-1">Sports</button>
+                <button class="mx-1 hover:bg-gray-200 px-1 rounded m-1">Arts</button>
+                <button class="mx-1 hover:bg-gray-200 px-1 rounded m-1">Books</button>
+                <button class="mx-1 hover:bg-gray-200 px-1 rounded m-1">Style</button>
+                <button class="mx-1 hover:bg-gray-200 px-1 rounded m-1">Food</button>
+                <button class="mx-1 hover:bg-gray-200 px-1 rounded m-1">Travel</button>
+                <button class="mx-1 hover:bg-gray-200 px-1 rounded m-1">Magazine</button>
+                <button class="mx-1 hover:bg-gray-200 px-1 rounded m-1">T Magazine</button>
+                <button class="mx-1 hover:bg-gray-200 px-1 rounded m-1">Video</button>
+            </nav>
+
+            <div id="advertisement" class="text-xs flex border-black border-b">
+                <div class="w-3/4 flex flex-wrap items-center">
+                    <div class="w-1/3 md:flex pr-3">
+                        <div class="md:flex-shrink-0">
+                            <img class="md:w-12" src="https://static01.nyt.com/images/2017/01/29/podcasts/the-daily-album-art/the-daily-album-art-square320-v4.png">
+                        </div>
+
+                        <div class="ml-2 flex items-center">
+                            <div>
+                                <h3 class="font-bold">Listen to ‘The Daily’ </h3>
+
+                                <p class="text-gray-700">The case against Harvey Weinstein, Part 1.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-1/3 md:flex border-l border-gray-300 p-3">
+                        <div class="md:flex-shrink-0">
+                            <img class="md:w-12" src="https://static01.nyt.com/images/2018/03/27/books/book-review-album-art-v2/book-review-album-art-v2-square320.jpg">
+                        </div>
+
+                        <div class="ml-2 items-center flex">
+                            <div>
+                                <h3 class="font-bold">The Book Review Podcast</h3>
+
+                                <p class="text-gray-700">Jack Hartnell talks about “Medieval Bodies.”</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-1/3 md:flex border-l border-gray-300 p-3">
+                        <div class="md:flex-shrink-0">
+                            <img class="md:w-12" src="https://static01.nyt.com/images/2020/01/09/briefing/10Briefing-Asia-promo/10Briefing-Asia-promo-square640-v2.png?quality=75&auto=webp&disable=upscale&width=350">
+                        </div>
+
+                        <div class="ml-2 flex items-center">
+                            <div>
+                                <h3 class="font-bold">Your Friday Briefing</h3>
+                                <p class="text-gray-700">One thing you can do: Help to preserve forests.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-1/4 py-2">
+                    <div id="stock" class="flex flex-col w-1/2 float-left border-l border-r border-gray-300 p-2">
+                        <div class="border-b border-gray-200 pb-1">
+                            <p class="float-left">S&P 500</p>
+                            <p class="text-red-500 float-right">-0.28%</p>
+                        </div>
+
+                        <div class="border-b border-gray-200 pb-1">
+                            <p class="float-left">Dow</p>
+                            <p class="text-red-500 float-right">-0.42%</p>
+                        </div>
+
+                        <div>
+                            <p class="float-left">Nasdaq</p>
+                            <p class="text-red-500 float-right">-0.03%</p>
+                        </div>
+                    </div>
+
+                    <div id="weather" class="flex flex-col w-1/2 float-right items-stretch">
+                        <div class="self-center">
+                            <div class="flex flex-row">
+                                <div class="pr-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-cloud"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+                                </div>
+
+                                <div>
+                                    <p>26°C</p>
+                                </div>
+                            </div>
+
+                            <div class="inline-block">
+                                <p>Hanoi, VietNam</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <article id="focus" class="border-t border-black">
+                <div class="w-2/3 flex-row pr-4 pt-1 float-left">
+                    <div class="border-b border-black">
+                        <div class="flex py-2">
+                            <div class="w-1/3 pr-3 flex flex-col">
+                                <div class="pb-3">
+                                    <a href="#">
+                                        <h2 class="font-bold">Trump Backs Away From Further Military Conflict With Iran</h2>
+
+                                        <ul class="text-xs text-gray-700">
+                                            <li>
+                                                President Trump said no Americans were harmed in missile strikes on U.S. bases, and Iran now “appears to be standing down.”
+                                            </li>
+                                            <li>
+                                                Analysts cautioned that even if the two sides ease off a further military clash in the short term, the conflict could very well play out in other ways.
+                                            </li>
+                                        </ul>
+                                    </a>
+
+                                    <time class="text-gray-500 text-xs">21m ago  <a href="#" class="border-b border-gray-300">1894 comments</a></time>
+                                </div>
+
+                                <div class="border-t border-gray-300 pt-2">
+                                    <h3 class="font-bold text-sm">“After-the-fact, lame briefings” from the White House aren’t adequate, a G.O.P. Senator said. Here’s the latest.</h3>
+                                    <span class="text-gray-600 text-xs">2h ago  <a href="#" class="border-b border-gray-300">782 comments</a></span>
+                                </div>
+                            </div>
+
+                            <div class="w-2/3 flex flex-col border-l border-gray-300 pl-3">
+                                <figure>
+                                    <img src="video.png" alt="video">
+                                    <figcaption class="text-xs text-gray-500">
+                                        In an address to the nation, President Trump spoke about the conflict with Iran after its retaliatory strikes on two bases housing American troops, and announced new economic sanctions against Tehran. Doug Mills/The New York Times
+                                    </figcaption>
+                                </figure>
+
+                                <div>
+                                    <h2 class="font-bold">Pelosi Announces Vote to Limit Trump’s War-Making Power Against Iran</h2>
+                                    <p class="text-gray-700 text-sm">The House is expected to vote on Thursday on a resolution to force the president to halt any military action against Iran unless Congress authorizes it.</p>
+                                    <time class="text-gray-500 text-xs">2h ago</time>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="py-3 border-b border-black">
+                        <div class="flex">
+                            <div class="w-1/2">
+                                <a href="#">
+                                    <h2 class="font-bold">3 Hours From Alert to Attacks: Inside a Tense Day at the White House</h2>
+                                    <p class="text-xs text-gray-700">A hail of ballistic missiles launched from Iran on Tuesday capped a frenetic day filled with confusion and misinformation.</p>
+                                    <time class="text-xs text-gray-500">3m ago</time>
+                                </a>
+                            </div>
+
+                            <div class="w-1/2">
+                                <div class="flex">
+                                    <div class="w-1/2 border-l border-gray-400 pl-3">
+                                        <a href="#">
+                                            <h2 class="font-bold">Its Missiles Did Little Damage, but Iran Has More Potent Weapons</h2>
+                                            <p class="text-xs text-gray-700">Drones, militants and hackers: Iran has an array of stealthier and more effective options if hostilities escalate.</p>
+                                            <time class="text-xs text-gray-500">2h ago</time>
+                                        </a>
+                                    </div>
+
+                                    <div class="w-1/2 border-l border-gray-400 pl-3">
+                                        <a href="#">
+                                            <h2 class="font-bold">Analysis: Trump’s Strategy Is a Cease-Fire Wrapped in a Strategic Muddle</h2>
+                                            <p class="text-xs text-gray-700">President Trump’s words and bald threats made it hard to see how the U.S. could break out of its cycle of confrontation and revenge with Iran.</p>
+                                            <time class="text-xs text-gray-500">52m ago</time>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="py-3 border-b border-black">
+                        <div class="flex">
+                            <div class="w-1/3">
+                                <div class="flex-col">
+                                    <div class="pb-2">
+                                        <h2 class="font-bold">After Airliner Crash in Iran, Experts Speculate About Attack</h2>
+                                        <p class="text-xs text-gray-700">Nothing was unusual about the plane’s takeoff. But minutes into the flight bound for Kyiv, the Boeing jet was engulfed in flames. At least 176 people died.</p>
+                                        <div>
+                                            <span class="text-xs text-gray-500">47m ago <a href="#" class="border-b border-gray-300">942 comments</a></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="border-t border-gray-500 pt-2">
+                                        <h2 class="font-bold">The victims of the crash were from at least seven countries, with 63 from Canada.</h2>
+                                        <span class="text-xs text-gray-500">3h ago</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="w-2/3 pl-3">
+                                <figure>
+                                    <img src="video1.png" alt="video1">
+                                    <figcaption class="text-xs text-gray-500">
+                                        The details surrounding the crash of a Ukrainian airliner shortly after takeoff from Tehran have been confusing. Here is what we know. Rohhollah Vadati/ISNA, via Agence France-Presse — Getty Images
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="py-3 border-b border-black">
+                        <div class="flex">
+                            <div class="w-1/3 flex">
+                                <div class="flex-col pr-4">
+                                    <div class="pb-4">
+                                        <a href="#">
+                                            <h2 class="font-bold">Prince Harry and Meghan’s Plan to ‘Step Back’ Jolts Royal Family</h2>
+                                            <p class="text-xs text-gray-700">The couple said they planned to divide their time between Britain and North America and would “work to become financially independent.”</p>
+                                        </a>
+                                        <div>
+                                            <span class="text-xs text-gray-500">2m ago <a href="#" class="border-b border-gray-300">1182 comments</a></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="border-t border-gray-500 py-3">
+                                        <a href="#" class="text-xs">
+                                            <h2 class="font-bold">Others have failed to both be part of the royal family, and separate. Can the Duke and Duchess of Sussex succeed?</h2>
+
+                                        </a>
+
+                                        <div>
+                                            <span class="text-xs text-gray-500">3m ago <a href="#" class="border-b border-gray-300">488 comments</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="w-2/3 pl-4 border-l border-gray-300">
+                                <figure>
+                                    <img src="video2.png" alt="video3">
+                                    <figcaption class="text-xs text-gray-500">
+                                        Meghan, the Duchess of Sussex, and Prince Harry in London on Tuesday. Chris Jackson/Getty Images
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="py-3 border-b border-black">
+                        <div class="flex">
+                            <div class="w-1/3">
+                                <a href="#">
+                                    <h2 class="font-bold">300 New Subway Cars Sidelined Over Fears Doors Would Open</h2>
+                                </a>
+                            </div>
+
+                            <div class="w-2/3 pl-3">
+                                <div>
+                                    <a href="#" class="text-sm text-gray-700">Two episodes raised concerns over doors opening while trains were in motion. The cars’ removal is a setback to efforts to modernize New York’s system.</a>
+                                </div>
+                                <span class="text-xs text-gray-600">2h ago</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="py-3">
+                        <div class="flex">
+                            <div class="w-1/3">
+                                <a href="#">
+                                    <h2 class="font-bold">How Elizabeth Warren Is Being Squeezed by 2 Democratic Factions</h2>
+                                    <p class="text-xs text-gray-700">Ms. Warren is figuring out what other candidates have already learned: It’s hard to appeal to both the center and the left of the Democratic Party.</p>
+                                </a>
+                                <div>
+                                    <span class="text-xs text-gray-600">3h <a href="#" class="border-b border-gray-300">243 comments</a></span>
+                                </div>
+                            </div>
+
+                            <a href="#" class="w-2/3 pl-3 pt-2">
+                                <figure class="flex">
+                                    <img src="image1.jpg" alt="image" class="w-1/2">
+
+                                    <figcaption class="w-1/2 pl-3">
+                                        <span class="text-xs text-gray-700">Senator Elizabeth Warren at a rally on Tuesday in Brooklyn. She appeared at the event with Julián Castro, the former housing secretary, who recently endorsed her.</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-1/3 float-right flex flex-col my-3 pl-3 border-l border-gray-300">
+                    <div>
+                        <a href="#" class="hover:text-gray-700 flex">
+                            <h2 class="font-bold">Opinion</h2>
+                            <div>
+                                <svg class="inline-block align-center ml-1" width="7" height="11" viewBox="0 0 7 12"><path d="M1 1l4.333 5L1 11" stroke="#121212" stroke-width="2" fill="none" fill-rule="evenodd"></path></svg>
+                            </div>
+                        </a>
+
+                        <div class="flex flex-col">
+                            <div class="border-b border-gray-300 pb-3">
+                                <div class="text-sm flex justify-between">
+                                    <div>
+                                        <a href="#" class="text-gray-500 font-bold">Gail Collins</a>
+                                        <h3 class="font-bold">President Mitch McConnell</h3>
+                                    </div>
+
+                                    <figure class="object-right">
+                                        <img class="w-8 object-right" src="https://static01.nyt.com/images/2018/04/03/opinion/gail-collins/gail-collins-thumbLarge.png?quality=75&auto=webp&disable=upscale"
+                                             alt="image">
+                                    </figure>
+                                </div>
+
+                                <p class="text-sm text-gray-700">He’s in charge of everything but shooting at Iran.</p>
+                                <span class="text-xs text-gray-500">2h ago <a href="#" class="border-b border-gray-300">105 comments</a></span>
+                            </div>
+
+                            <div class="border-b border-gray-300">
+                                <div class="flex my-3">
+                                    <div class="w-1/2 mr-4">
+                                        <a href="#">
+                                            <div class="flex justify-between">
+                                                <div>
+                                                    <div class="text-gray-500 font-bold">Nicholas Kristof</div>
+                                                    <h3 class="font-bold">Trump Has a Bizarre Idea of Winning</h3>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <p class="text-sm text-gray-700">Let’s tally up the results of his efforts with Iran.</p>
+                                        <span class="text-xs text-gray-500">7h ago <a href="#" class="border-b border-gray-300">160 comments</a></span>
+                                    </div>
+
+                                    <div class="w-1/2">
+                                        <figure>
+                                            <img src="https://static01.nyt.com/images/2020/01/08/opinion/08kristofWeb/08kristofWeb-square640-v3.jpg?quality=75&auto=webp&disable=upscale&width=350"
+                                                 alt="image">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="border-b border-gray-300 flex py-4">
+                                <div class="w-1/2 flex flex-col text-xs pr-3">
+                                    <div class="border-b border-gray-300 pb-3">
+                                        <div class="flex justify-between">
+                                            <div>
+                                                <div class="text-sm text-gray-500 pb-2 font-bold">Thmos L.Friedman</div>
+                                                <h3 class="font-bold">Did Trump and Iran Just Bury the Hatchet, or the Future?</h3>
+                                            </div>
+
+                                            <figure>
+                                                <img class="w-16" src="https://static01.nyt.com/images/2018/04/02/opinion/thomas-l-friedman/thomas-l-friedman-thumbLarge.png?quality=75&auto=webp&disable=upscale"
+                                                     alt="image">
+                                            </figure>
+                                        </div>
+                                    </div>
+
+                                    <div class="border-b border-gray-300 py-3">
+                                        <div class="text-gray-500 text-sm pb-2 font-bold">Michelle Cottle</div>
+                                        <h3 class="font-bold">Can We Please Stop Fighting About ‘Medicare for All’?</h3>
+                                    </div>
+
+                                    <div class="border-b border-gray-300 py-3">
+                                        <div class="flex justify-between">
+                                            <div>
+                                                <div class="text-sm text-gray-500 pb-2 font-bold">Charles M. Blow</div>
+                                                <h3 class="font-bold">My Journey to Radical Environmentalism</h3>
+                                            </div>
+
+                                            <figure>
+                                                <img class="w-16" src="https://static01.nyt.com/images/2018/04/02/opinion/charles-m-blow/charles-m-blow-thumbLarge.png?quality=75&auto=webp&disable=upscale"
+                                                     alt="image">
+                                            </figure>
+                                        </div>
+                                    </div>
+
+                                    <div class="border-b border-gray-300 py-3">
+                                        <div class="text-sm text-gray-500 pb-2 font-bold">Kenny Fries</div>
+                                        <h3 class="font-bold">Before the ‘Final Solution’ There Was a ‘Test Killing’</h3>
+                                    </div>
+
+                                    <div class="py-3">
+                                        <div class="text-sm text-gray-500 pb-2 font-bold">The Editorial Board</div>
+                                        <h3 class="font-bold pr-3">Carlos Ghosn, Victim or Villain?</h3>
+                                    </div>
+                                </div>
+
+                                <div class="w-1/2 border-l border-gray-300 text-xs pl-3">
+                                    <div class="py-3 border-b border-gray-300">
+                                        <div class="text-sm text-gray-500 pb-2 font-bold">Molly Oswaks</div>
+                                        <h3 class="font-bold pr-3">Elizabeth Wurtzel Was a Great Writer and a Better Friend</h3>
+                                    </div>
+
+                                    <div class="py-3 border-b border-gray-300">
+                                        <div class="flex justify-between">
+                                            <div>
+                                                <div class="text-sm text-gray-500 pb-2 font-bold">Roger Cohen</div>
+                                                <h3 class="font-bold">The American-Iranian Psychosis, Next Chapter</h3>
+                                            </div>
+
+                                            <figure>
+                                                <img class="w-16" src="https://static01.nyt.com/images/2014/11/01/opinion/cohen-circular/cohen-circular-thumbLarge-v6.png?quality=75&auto=webp&disable=upscale"
+                                                     alt="image">
+                                            </figure>
+                                        </div>
+                                    </div>
+
+                                    <div class="py-3 border-b border-gray-300">
+                                        <div class="flex justify-between">
+                                            <div>
+                                                <div class="text-sm text-gray-500 pb-2 font-bold">Jamelle Bouie</div>
+                                                <h3 class="font-bold">The Trump We Did Not Want to See</h3>
+                                            </div>
+
+                                            <figure>
+                                                <img class="w-16" src="https://static01.nyt.com/images/2019/01/24/opinion/jamelle-bouie/jamelle-bouie-thumbLarge-v3.png?quality=75&auto=webp&disable=upscale"
+                                                     alt="image">
+                                            </figure>
+                                        </div>
+                                    </div>
+
+                                    <div class="py-3">
+                                        <div class="flex justify-between">
+                                            <div>
+                                                <div class="text-sm text-gray-500 pb-2 font-bold">Jochen Bottner</div>
+                                                <h3 class="font-bold">The Tragedy of Germany’s Energy Experiment</h3>
+                                            </div>
+
+                                            <figure>
+                                                <img class="w-16" src="https://static01.nyt.com/images/2018/07/26/opinion/bittner-headshot/bittner-headshot-thumbLarge.png?quality=75&auto=webp&disable=upscale"
+                                                     alt="image">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col">
+                        <h2 class="font-bold py-2">Editor's Picks</h2>
+                        <div class="text-sm text-gray-700">
+                            <span><a href="#" class="text-2xl text-gray-900">Would You Work for Nothing at Disney? 10,000 Fans Applied</a></span>
+                            <div class="border-b border-gray-300 py-3">
+                                <div class="flex">
+                                    <div class="w-1/2 pr-4">
+                                        <p>Only 14 people were selected to be on the Disney Parks Moms Panel (three are dads). They will help interested parkgoers plan their Disney vacations.</p>
+                                        <div class="pt-2">
+                                            <span class="text-gray-500 text-xs">Travel <a href="#" class="border-b border-gray-300">171 comments</a></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="w-1/2">
+                                        <figure>
+                                            <img src="https://static01.nyt.com/images/2020/01/19/travel/07disney5/07disney5-square640-v3.jpg?quality=75&auto=webp&disable=upscale&width=350"
+                                                 alt="image">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="border-b border-gray-300 py-3">
+                                <div class="flex">
+                                    <div class="w-1/2 pr-4">
+                                        <h3 class="font-bold text-black pb-2">Florence Pugh’s True Hollywood Fairy Tale</h3>
+                                        <p>The 24-year-old, chameleonlike star of “Little Women” and “Midsommar” can make you believe in the impossible.</p>
+                                        <div class="pt-2">
+                                            <span class="text-gray-500 text-xs">Movies Jan. 8<a href="#" class="border-b border-gray-300">68 comments</a></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="w-1/2">
+                                        <figure>
+                                            <img src="https://static01.nyt.com/images/2020/01/12/arts/12florence-pugh4/12florence-pugh4-square640.jpg?quality=75&auto=webp&disable=upscale&width=350"
+                                                 alt="image">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="py-3">
+                                <div class="flex">
+                                    <div class="w-1/2 pr-6">
+                                        <h3 class="font-bold text-black pb-2">What You Need to Know About 5G in 2020</h3>
+                                        <p>After years of hype, carriers are giving consumers clarity on what their next-generation cellular networks will realistically do.</p>
+                                        <div class="pt-2">
+                                            <span class="text-xs text-gray-500">Tech <a href="#" class="border-b border-gray-300">171 comments</a></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="w-1/2">
+                                        <figure>
+                                            <img src="https://static01.nyt.com/images/2020/01/08/business/08Techfix-illo/08Techfix-illo-square640.jpg?quality=75&auto=webp&disable=upscale&width=350"
+                                                 alt="image">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div class="h-32 bg-gray-100">
+            <p class="text-xs text-gray-600 text-center">ADVERTISEMENT</p>
+        </div>
+
+
+
+        <div class="max-w-5xl mx-auto flex flex-col">
+            <div style="border-top: black; border-style: double" class="mt-6"></div>
+            <div id="others-new">
+                <h2 class="font-bold my-2">In Other News</h2>
+
+                <div class="flex">
+                    <div class="w-2/5 flex-col flex pr-3">
+                        <figure>
+                            <img src="https://static01.nyt.com/images/2020/01/08/world/08oz-disinformation-1/merlin_166634454_d61ac3aa-1ee8-4358-98e8-9de60c774ad2-threeByTwoMediumAt2X.jpg?quality=75&auto=webp&disable=upscale&width=1100"
+                                 alt="image">
+                        </figure>
+
+                        <section class="w-64 text-xs text-center self-center text-gray-700">
+                            <a href="#">
+                                <h2 class="font-bold text-xl text-black pt-6">How Rupert Murdoch Is Influencing Australia’s Bushfire Debate</h2>
+                                <p class="text-sm py-2">Critics see a concerted effort to shift blame, protect conservative leaders and divert attention from climate change.</p>
+                            </a>
+                            <span class="text-gray-500">Australia  8h ago <a href="#" class="border-b border-gray-300">213 comments</a></span>
+                        </section>
+                    </div>
+
+                    <div class="w-2/5 flex-row text-xs border-l border-r px-3 border-gray-300">
+                        <section class="border-b border-gray-300 pb-4">
+                            <div class="flex">
+                                <div class="w-1/2 pr-3">
+                                    <h3 class="font-bold text-sm">Carlos Ghosn: The Executive Fugitive Under Pressure</h3>
+                                    <p class="text-gray-700 py-1">The former head of Nissan, who holds several passports and speaks at least four languages, is trying to convince the world that the system was rigged to bring him down.</p>
+                                    <span class="text-gray-500">Business <time>6h ago</time></span>
+                                </div>
+
+                                <div class="w-1/2">
+                                    <figure>
+                                        <img src="https://static01.nyt.com/images/2020/01/08/business/08ghosnassess-1/08ghosnassess-1-threeByTwoSmallAt2X-v3.jpg?quality=75&auto=webp&disable=upscale&width=400"
+                                             alt="image">
+                                    </figure>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="py-3 border-b border-gray-300">
+                            <div class="flex">
+                                <div class="w-1/2 pr-3">
+                                    <h3 class="font-bold">Seattle Cracks Down on Vaccine Compliance After Measles Scare</h3>
+                                    <p class="py-3">At a time when states and school districts are trying to increase vaccination rates, an aggressive strategy in Seattle appears to be paying off.</p>
+                                    <span class="text-gray-500">U.S  <time>5h ago</time></span>
+                                </div>
+
+                                <div class="w-1/2">
+                                    <figure>
+                                        <img src="https://static01.nyt.com/images/2020/01/08/us/08vax-schools-web/merlin_166502907_88d5e82a-9c6c-4140-a772-4e6c77301cd9-threeByTwoSmallAt2X.jpg?quality=75&auto=webp&disable=upscale&width=400"
+                                             alt="image">
+                                    </figure>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="pt-3">
+                            <div class="flex">
+                                <div class="w-1/2 pr-3">
+                                    <h3 class="font-bold">Potential Jurors For Weinstein Trial Say They Can’t Be Fair</h3>
+                                    <p class="text-gray-700 py-2">Many potential jurors in his rape case want to be excused, saying their knowledge of the accusations could affect their judgment.</p>
+                                    <span class="text-gray-500">New York  <time>5h ago</time></span>
+                                </div>
+
+                                <div class="w-1/2">
+                                    <figure>
+                                        <img src="https://static01.nyt.com/images/2020/01/08/nyregion/08weinstein/08weinstein-threeByTwoSmallAt2X.jpg?quality=75&auto=webp&disable=upscale&width=400"
+                                             alt="image">
+                                    </figure>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="w-1/5"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="h-32 bg-gray-100 my-6">
+            <p class="text-gray-500 text-xs text-center">ADVERTISEMENT</p>
+        </div>
+
+        <div class="max-w-5xl mt-2 mx-auto flex flex-col">
+            <div style="border-top: black; border-style: double" class="mt-3"></div>
+            <div id="smart-living" class="text-xs pb-6">
+                <a href="#" class="my-3 flex">
+                    <h2 class="font-bold text-sm">Smarter Living</h2>
+                    <div>
+                        <svg class="inline-block align-center ml-1" width="7" height="11" viewBox="0 0 7 12"><path d="M1 1l4.333 5L1 11" stroke="#121212" stroke-width="2" fill="none" fill-rule="evenodd"></path></svg>
+                    </div>
+                </a>
+
+                <div class="flex flex-row my-3">
+                    <section class="flex-col pr-3 border-r border-gray-300 w-1/5">
+                        <figure>
+                            <img src="https://static01.nyt.com/images/2019/12/12/smarter-living/00sl-complain/00sl-complain-threeByTwoSmallAt2X.jpg?quality=75&auto=webp&disable=upscale&width=400"
+                                 alt="image">
+                        </figure>
+
+                        <div class="mt-3">
+                            <h3 class="font-bold">Go Ahead and Complain. It Might Be Good for You.</h3>
+                            <div class="pt-2">
+                                <span class="mt-3 text-gray-500">Smarter Living Jan. 8</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="flex-col px-3 border-r border-gray-300 w-1/5">
+                        <figure>
+                            <img src="https://static01.nyt.com/images/2019/12/13/smarter-living/00wc_overspending/00wc_overspending-threeByTwoSmallAt2X.png?quality=75&auto=webp&disable=upscale&width=400"
+                                 alt="image">
+                        </figure>
+
+                        <div class="mt-3">
+                            <h3 class="font-bold">What to Do if You Overspent During the Holidays</h3>
+                            <div class="pt-2">
+                                <span class="mt-3 text-gray-500">Wirecutter  Jan. 7</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="flex-col px-3 border-r border-gray-300 w-1/5">
+                        <figure>
+                            <img src="https://static01.nyt.com/images/2019/12/31/smarter-living/guide-travel/guide-travel-threeByTwoSmallAt2X.jpg?quality=75&auto=webp&disable=upscale&width=400"
+                                 alt="image">
+                        </figure>
+
+                        <div class="mt-3">
+                            <h3 class="font-bold">Be a More Sustainable Traveler</h3>
+                            <div class="pt-2">
+                                <span class="mt-3 text-gray-500">Travel  Jan. 7</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="flex-col px-3 border-r border-gray-300 w-1/5">
+                        <figure>
+                            <img src="https://static01.nyt.com/images/2020/01/03/multimedia/03help/00sl-pets-threeByTwoSmallAt2X.jpg?quality=75&auto=webp&disable=upscale&width=400"
+                                 alt="image">
+                        </figure>
+
+                        <div class="mt-3">
+                            <h3 class="font-bold">Dogs in Cars, Getting There Safely</h3>
+                            <div class="pt-2">
+                                <span class="mt-3 text-gray-500">Smarter Living Jan. 8</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="flex-col pl-3 w-1/5">
+                        <figure>
+                            <img src="https://static01.nyt.com/images/2017/12/01/smarter-living/guide-resolution/guide-resolution-articleLarge.gif?quality=75&auto=webp&disable=upscale"
+                                 alt="image">
+                        </figure>
+
+                        <div class="mt-3">
+                            <h3 class="font-bold">How to Make (and Keep) a New Year’s Resolution</h3>
+                            <div class="pt-2">
+                                <span class="mt-3 text-gray-500">Smarter Living Jan. 8</span>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-5xl mt-2 mx-auto flex flex-col">
+            <div style="border-top: black; border-style: double"></div>
+
+            <div id="features" class="mb-4">
+                <h2 class="font-bold text-xl py-2">Features</h2>
+
+                <div class="flex text-xs">
+                    <section class="w-3/5 flex flex-col pr-3">
+                        <figure>
+                            <img src="https://static01.nyt.com/images/2020/01/07/t-magazine/07tmag-recipepromo/07tmag-recipepromo-threeByTwoMediumAt2X.jpg?quality=75&auto=webp&disable=upscale&width=1100"
+                                 alt="image">
+                        </figure>
+
+                        <div class="max-w-md self-center">
+                            <a href="#">
+                                <h3 class="text-2xl pt-4 text-center">T’s Favorite Nourishing Recipes for a More Healthful 2020</h3>
+                                <div class="w-12 border-t border-gray-300 mx-auto my-4"></div>
+                                <p class="text-center text-sm text-gray-700">A roundup of vibrant dishes for the new year, from a vegetable-packed green soup to a comforting persimmon porridge.</p>
+                                <div class="py-2 text-center">
+                                    <span class="text-gray-500 text-xs">Media 7h ago</span>
+                                </div>
+                            </a>
+
+                        </div>
+                    </section>
+
+                    <section class="w-2/5 flex flex-col border-l border-gray-300">
+                        <section class="flex border-b border-gray-300 mx-3 pb-3">
+                            <div class="w-1/2 flex-col pr-3">
+                                <figure>
+                                    <img src="https://static01.nyt.com/images/2020/01/09/fashion/09Unbuttoned-stylist-1/09Unbuttoned-stylist-1-threeByTwoSmallAt2X.jpg?quality=75&auto=webp&disable=upscale&width=400"
+                                         alt="image">
+                                </figure>
+
+                                <h3 class="font-bold text-sm py-2">Even NASCAR Drivers Need a Stylist</h3>
+                                <p class="text-gray-700">It’s not just celebrities on the red carpet who can use help getting dressed. Why shouldn’t athletes have a similar opportunity?</p>
+                                <div class="pt-2"><span class="text-gray-500">Style <time>8h ago</time></span></div>
+                            </div>
+
+                            <div class="w-1/2 flex-col border-l border-gray-300 pl-3">
+                                <figure>
+                                    <img src="https://static01.nyt.com/images/2020/01/07/books/07BOOKSMITH1/07BOOKSMITH1-threeByTwoSmallAt2X.png?quality=75&auto=webp&disable=upscale&width=400"
+                                         alt="image">
+                                </figure>
+
+                                <h3 class="font-bold text-sm py-2">Poems That Produce Shocking New Vibrations</h3>
+                                <p class="text-gray-700">Danez Smith’s innovative new collection, “Homie,” exalts friendship, where deep love can be best conveyed through imaginative insult.</p>
+                                <div class="pt-2"><span class="text-gray-500">Books  <time>Jan. 7</time></span></div>
+                            </div>
+                        </section>
+
+                        <section class="flex p-3">
+                            <div class="w-1/2 flex-col pr-3">
+                                <figure>
+                                    <img src="https://static01.nyt.com/images/2020/01/08/obituaries/08RWA-sub/merlin_166844526_9bb74e05-c8bf-4269-9b26-ebfe15639631-threeByTwoSmallAt2X.jpg?quality=75&auto=webp&disable=upscale&width=400"
+                                         alt="image">
+                                </figure>
+
+                                <h3 class="font-bold text-sm py-2">Publishers, Citing Diversity Concerns, to Skip Romance Conference</h3>
+                                <p class="text-gray-700">Harlequin, Avon and other publishers said that they will not support this year’s Romance Writers of America conference which faces criticism over a racism dispute.</p>
+                                <div class="pt-2"><span class="text-gray-500">Style  <time>8h ago</time></span></div>
+                            </div>
+
+                            <div class="w-1/2 flex-col border-l border-gray-300 pl-3">
+                                <figure>
+                                    <img src="https://static01.nyt.com/images/2020/01/08/arts/08cyrano/merlin_166149543_129da404-4b03-4656-87e6-3837da8b86c5-threeByTwoSmallAt2X.jpg?quality=75&auto=webp&disable=upscale&width=400"
+                                         alt="image">
+                                </figure>
+
+                                <h3 class="font-bold text-sm py-2">James McAvoy’s Rapping Cyrano Dazzles With Words</h3>
+                                <p class="text-gray-700">In this time-bending version of “Cyrano de Bergerac,” people make love and war through glorious language, our critic writes.</p>
+                                <div class="pt-2"><span class="text-gray-500">Books <time>Jan. 7</time></span></div>
+                            </div>
+                        </section>
+                    </section>
+                </div>
+            </div>
+
+            <div id="science-technology"></div>
+
+            <div id="most-popular"></div>
+
+            <div id="news"></div>
+
+            <div id="opinion"></div>
+
+            <div id="arts"></div>
+
+            <div id="living"></div>
+        </div>
+
+        <footer class="max-w-5xl mx-auto pb-6">
+            <div style="border-top: #94989c; border-style: groove"></div>
+            <h1 class="font-bold text-xl my-1">The New York Times</h1>
+
+            <nav class="flex flex-row pb-4 border-b border-gray-300">
+                <div class="w-5/6 flex border-r border-gray-300">
+                    <div class="w-1/5">
+                        <h2 class="font-bold">NEWS</h2>
+                        <ul class="text-sm">
+                            <li><a href="#" class="hover:underline">Home Page</a></li>
+                            <li><a href="#" class="hover:underline">World</a></li>
+                            <li><a href="#" class="hover:underline">U.S</a></li>
+                            <li><a href="#" class="hover:underline">Politics</a></li>
+                            <li><a href="#" class="hover:underline">Election 2020</a></li>
+                            <li><a href="#" class="hover:underline">New York</a></li>
+                            <li><a href="#" class="hover:underline">Business</a></li>
+                            <li><a href="#" class="hover:underline">Tech</a></li>
+                            <li><a href="#" class="hover:underline">Science</a></li>
+                            <li><a href="#" class="hover:underline">Sports</a></li>
+                            <li><a href="#" class="hover:underline">Obituaries</a></li>
+                            <li><a href="#" class="hover:underline">Today's Paper</a></li>
+                            <li><a href="#" class="hover:underline">Corrections</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="w-1/5">
+                        <h2 class="font-bold">OPINION</h2>
+                        <ul class="text-sm">
+                            <li><a href="#" class="hover:underline">Today's Opinion</a></li>
+                            <li><a href="#" class="hover:underline">Op-Ed Columnists</a></li>
+                            <li><a href="#" class="hover:underline">Editorials</a></li>
+                            <li><a href="#" class="hover:underline">Letters</a></li>
+                            <li><a href="#" class="hover:underline">Sunday Review</a></li>
+                            <li><a href="#" class="hover:underline">Video: Opinion</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="w-1/5">
+                        <h2 class="font-bold">ARTS</h2>
+                        <ul class="text-sm">
+                            <li><a href="#" class="hover:underline">Today's Arts</a></li>
+                            <li><a href="#" class="hover:underline">Art & Design</a></li>
+                            <li><a href="#" class="hover:underline">Books</a></li>
+                            <li><a href="#" class="hover:underline">Dance</a></li>
+                            <li><a href="#" class="hover:underline">Movies</a></li>
+                            <li><a href="#" class="hover:underline">Music</a></li>
+                            <li><a href="#" class="hover:underline">Pop Culture</a></li>
+                            <li><a href="#" class="hover:underline">Television</a></li>
+                            <li><a href="#" class="hover:underline">Theater</a></li>
+                            <li><a href="#" class="hover:underline">Video: Arts</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="w-1/5">
+                        <h2 class="font-bold">LIVING</h2>
+                        <ul class="text-sm">
+                            <li><a href="#" class="hover:underline">Automobiles</a></li>
+                            <li><a href="#" class="hover:underline">Crossword</a></li>
+                            <li><a href="#" class="hover:underline">Education</a></li>
+                            <li><a href="#" class="hover:underline">Food</a></li>
+                            <li><a href="#" class="hover:underline">Health</a></li>
+                            <li><a href="#" class="hover:underline">Jobs</a></li>
+                            <li><a href="#" class="hover:underline">Magazine</a></li>
+                            <li><a href="#" class="hover:underline">Parenting</a></li>
+                            <li><a href="#" class="hover:underline">Real Estate</a></li>
+                            <li><a href="#" class="hover:underline">T Magazize</a></li>
+                            <li><a href="#" class="hover:underline">Travel</a></li>
+                            <li><a href="#" class="hover:underline">Love</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="w-1/5">
+                        <h2 class="font-bold">MORE</h2>
+                        <ul class="text-sm">
+                            <li><a href="#" class="hover:underline">Reader Center</a></li>
+                            <li><a href="#" class="hover:underline">Wirecutter</a></li>
+                            <li><a href="#" class="hover:underline">Live Events</a></li>
+                            <li><a href="#" class="hover:underline">The Learning Network</a></li>
+                            <li><a href="#" class="hover:underline">Tools & Services</a></li>
+                            <li><a href="#" class="hover:underline">N.Y.C Events Guide</a></li>
+                            <li><a href="#" class="hover:underline">Multimedia</a></li>
+                            <li><a href="#" class="hover:underline">Photography</a></li>
+                            <li><a href="#" class="hover:underline">Video</a></li>
+                            <li><a href="#" class="hover:underline">Newsletters</a></li>
+                            <li><a href="#" class="hover:underline">NYT Journeys</a></li>
+                            <li><a href="#" class="hover:underline">Manage My Account</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="w-1/6 flex flex-col pl-3">
+                    <h2 class="font-bold text-sm">SUBSCRIBE</h2>
+                    <ul class="py-3">
+                        <li>
+                            <a href="#" class="hover:underline">
+                                <div class="flex flex-row">
+                                    <svg class="w-3" viewBox="0 0 14 13" fill="#000"><path d="M13.1,11.7H3.5V1.2h9.6V11.7zM13.1,0.4H3.5C3,0.4,2.6,0.8,2.6,1.2v2.2H0.9C0.4,3.4,0,3.8,0,4.3v5.2v1.5c0,0.8,0.8,1.5,1.8,1.5h1.7h0h7.4h2.2c0.5,0,0.9-0.4,0.9-0.9V1.2C14,0.8,13.6,0.4,13.1,0.4"></path><polygon points="10.9,3 5.2,3 5.2,3.9 11.4,3.9 11.4,3"></polygon><rect x="5.2" y="4.7" width="6.1" height="0.9"></rect><rect x="5.2" y="6.5" width="6.1" height="0.9"></rect></svg>
+                                    <h3 class="font-bold ml-2 text-sm">Home Delivery</h3>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="hover:underline">
+                                <div class="flex flex-row">
+                                    <svg class="w-3" viewBox="0 0 10 13"><path fill="#000" d="M9.9,8c-0.4,1.1-1.2,1.9-2.3,2.4V8l1.3-1.2L7.6,5.7V4c1.2-0.1,2-1,2-2c0-1.4-1.3-1.9-2.1-1.9c-0.2,0-0.3,0-0.6,0.1v0.1c0.1,0,0.2,0,0.3,0c0.5,0,0.9,0.2,0.9,0.7c0,0.4-0.3,0.7-0.8,0.7C6,1.7,4.5,0.6,2.8,0.6c-1.5,0-2.5,1.1-2.5,2.2C0.3,4,1,4.3,1.6,4.6l0-0.1C1.4,4.4,1.3,4.1,1.3,3.8c0-0.5,0.5-0.9,1-0.9C3.7,2.9,6,4,7.4,4h0.1v1.7L6.2,6.8L7.5,8v2.4c-0.5,0.2-1.1,0.3-1.7,0.3c-2.2,0-3.6-1.3-3.6-3.5c0-0.5,0.1-1,0.2-1.5l1.1-0.5V10l2.2-1v-5L2.5,5.5c0.3-1,1-1.7,1.8-2l0,0C2.2,3.9,0.1,5.6,0.1,8c0,2.9,2.4,4.8,5.2,4.8C8.2,12.9,9.9,10.9,9.9,8L9.9,8z"></path></svg>
+                                    <h3 class="font-bold ml-2 text-sm">Digital Subscriptions</h3>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="hover:underline">
+                                <div class="flex flex-row">
+                                    <svg class="w-3" viewBox="0 0 13 13" fill="#000"><polygon points="0,-93.6 0,-86.9 6.6,-93.6"></polygon><polygon points="0.9,-86 7.5,-86 7.5,-92.6"></polygon><polygon points="0,-98 0,-94.8 8.8,-94.8 8.8,-86 12,-86 12,-98"></polygon><path d="M11.9-40c-0.4,1.1-1.2,1.9-2.3,2.4V-40l1.3-1.2l-1.3-1.2V-44c1.2-0.1,2-1,2-2c0-1.4-1.3-1.9-2.1-1.9c-0.2,0-0.3,0-0.6,0.1v0.1c0.1,0,0.2,0,0.3,0c0.5,0,0.9,0.2,0.9,0.7c0,0.4-0.3,0.7-0.8,0.7c-1.3,0-2.8-1.1-4.5-1.1c-1.5,0-2.5,1.1-2.5,2.2c0,1.1,0.6,1.5,1.3,1.7l0-0.1c-0.2-0.1-0.4-0.4-0.4-0.7c0-0.5,0.5-0.9,1-0.9C5.7-45.1,8-44,9.4-44h0.1v1.7l-1.3,1.1L9.5-40v2.4c-0.5,0.2-1.1,0.3-1.7,0.3c-2.2,0-3.6-1.3-3.6-3.5c0-0.5,0.1-1,0.2-1.5l1.1-0.5v4.9l2.2-1v-5l-3.3,1.5c0.3-1,1-1.7,1.8-2l0,0c-2.2,0.5-4.3,2.1-4.3,4.6c0,2.9,2.4,4.8,5.2,4.8C10.2-35.1,11.9-37.1,11.9-40L11.9-40z"></path><path d="M12.2-23.7c-0.2,0-0.4,0.2-0.4,0.4v0.4L0.4-19.1v2.3l3,1l-0.2,0.6c-0.3,0.8,0.1,1.8,0.9,2.1l1.7,0.7c0.2,0.1,0.4,0.1,0.6,0.1c0.6,0,1.3-0.4,1.5-1l0.4-0.9l3.5,1.2v0.4c0,0.2,0.2,0.4,0.4,0.4c0.2,0,0.4-0.2,0.4-0.4v-10.7C12.6-23.5,12.4-23.7,12.2-23.7M7.1-13.6c-0.2,0.4-0.6,0.6-1,0.4l-1.7-0.7c-0.4-0.2-0.6-0.6-0.4-1l0.3-0.7l3.3,1.1L7.1-13.6z"></path><path d="M13.1-60.3H3.5v-10.5h9.6V-60.3zM13.1-71.6H3.5c-0.5,0-0.9,0.4-0.9,0.9v2.2H0.9c-0.5,0-0.9,0.4-0.9,0.9v5.2v1.5c0,0.8,0.8,1.5,1.8,1.5h1.7h0h7.4h2.2c0.5,0,0.9-0.4,0.9-0.9v-10.5C14-71.2,13.6-71.6,13.1-71.6"></path><polygon points="10.9,-69 5.2,-69 5.2,-68.1 11.4,-68.1 11.4,-69"></polygon><rect x="5.2" y="-67.3" width="6.1" height="0.9"></rect><rect x="5.2" y="-65.5" width="6.1" height="0.9"></rect><path d="M12,6.5H6.5V12H1V6.5h5.5V1H12V6.5zM12,0H1C0.4,0,0,0.5,0,1v11c0,0.6,0.4,1,1,1h11c0.5,0,1-0.4,1-1V1C13,0.5,12.5,0,12,0"></path></svg>
+                                    <h3 class="font-bold ml-2 text-sm">Crossword</h3>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="hover:underline">
+                                <div class="flex flex-row">
+                                    <svg class="w-3" viewBox="0 0 13 13" fill="#000"><path d="M12,2.9L9.6,5.2c-0.1,0.1-0.3,0.1-0.4,0C9.1,5.2,9.1,5,9.3,4.9l2.4-2.4c-0.2-0.2-0.3-0.3-0.5-0.5L8.7,4.3c-0.1,0.1-0.3,0.1-0.4,0C8.2,4.3,8.2,4.1,8.4,4l2.4-2.4c-0.3-0.3-0.5-0.5-0.5-0.5L7.6,3.4C7.1,4,6.8,5.1,7.1,5.8c-1.4,1-4.6,3.5-5.1,4c-0.8,0.8-0.4,1.8-0.3,1.9c0,0,0,0,0,0c0,0,0,0,0,0c0.1,0.1,1.1,0.5,1.9-0.3c0.4-0.4,2.9-3.6,3.9-5C8.4,6.9,9.6,6.6,10.2,6l2.3-2.6C12.5,3.4,12.3,3.2,12,2.9z"></path><path d="M0.8,1.9l0.3-0.3c0.9-0.9,3.2,1.1,3.8,1.7s0.9,1.8,0.4,2.6c1.4,1.1,4.6,3.5,5,3.9c0.8,0.8,0.4,1.8,0.3,1.9c0,0,0,0,0,0c0,0,0,0,0,0c-0.1,0.1-1.1,0.5-1.9-0.3c-0.4-0.4-2.9-3.7-4-5.1C3.9,6.7,2.9,6.4,2.3,5.8S-0.2,2.9,0.8,1.9z"></path></svg>
+                                    <h3 class="font-bold ml-2 text-sm">Cooking</h3>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="py-2 text-xs">
+                        <ul>
+                            <li><a href="#" class="hover:underline">Email Newsletters</a></li>
+                            <li><a href="#" class="hover:underline">Corporate Subscriptions</a></li>
+                            <li><a href="#" class="hover:underline">Education Rate</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="py-2 border-t border-gray-300 text-xs">
+                        <ul>
+                            <li><a href="#" class="hover:underline">Mobile Applications</a></li>
+                            <li><a href="#" class="hover:underline">Replica Edition</a></li>
+                            <li><a href="#" class="hover:underline">Thailand</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div id="contact" class="mx-6 flex flex-row text-xs py-3 text-gray-600">
+                <a href="#" class="hover:underline mx-3">NYTCo</a>
+                <a href="#" class="hover:underline mx-3">Contact Us</a>
+                <a href="#" class="hover:underline mx-3">Work with us</a>
+                <a href="#" class="hover:underline mx-3">Advertise</a>
+                <a href="#" class="hover:underline mx-3">T Brand Studio</a>
+                <a href="#" class="hover:underline mx-3">Your Ad Choices</a>
+                <a href="#" class="hover:underline mx-3">Terms of Service</a>
+                <a href="#" class="hover:underline mx-3">Site Map</a>
+                <a href="#" class="hover:underline mx-3">Help</a>
+                <a href="#" class="hover:underline mx-3">Subscriptions</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
